@@ -1,0 +1,523 @@
+
+body {
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+   }
+   
+   .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px
+   }
+   
+   h2 {
+    animation: 1s blink linear infinite;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+   }
+   
+   .birthdayCard {
+    position: absolute;
+    margin-top: 200px;
+    margin-right : 75%;
+    width: 200px;
+    height: 250px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+    user-select: none;
+   }
+   
+   .cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: .6s;
+    user-select: none;
+  }
+   
+   .happy {
+    font-family: Tahoma, sans-serif;
+    text-align: center; 
+    margin: 30px;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    transition: .1s;
+    user-select: none;
+   }
+   
+   .balloons {
+    position: absolute;
+   }
+   
+   .balloonOne,
+   .balloonTwo,
+   .balloonThree {
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+   }
+   
+   .balloonOne {
+    background-color: rgb(239, 71, 111, 0.7);
+    left: 5px;
+    top: 50px;
+   }
+   
+   .balloonTwo {
+    background-color: rgb(6, 214, 160, 0.7);
+    left: 60px;
+    top: 20px;
+   }
+   
+   .balloonThree {
+    background-color: rgba(163, 82, 255, 0.7);
+    left: 110px;
+    top: 50px;
+   }
+   
+
+   
+   .balloonOne:before,
+   .balloonTwo:before,
+   .balloonThree:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 155px;
+    background-color: #ffd166;
+    top: 95px;
+    left: 43px;
+   }
+   
+   .balloonOne:after,
+   .balloonTwo:after,
+   .balloonThree:after{
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: 94px;
+    left: 37px;
+   }
+   
+   .balloonOne:after {
+    border-bottom: 10px solid #ef476f;
+   }
+   
+   .balloonTwo:after {
+    border-bottom: 10px solid #06d6a0;
+   }
+   
+   .balloonThree:after {
+    border-bottom: 10px solid #ffd166;
+   }
+   
+   
+   .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    height: 250px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    user-select: none;
+
+   }
+   
+   p {
+    font-family: cursive;
+    margin: 15px 10px 10px 30px;
+    color: #333;
+    user-select: none;
+
+   }
+   
+   .name {
+    position: absolute;
+    left: 150px;
+    /* top: 200px; */
+    color: #333;
+    text-decoration: underline;
+    user-select: none;
+   }
+   
+   .back {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    outline-color: rgb(0, 0, 0);
+    outline-style: dashed;
+    user-select: none;
+   }
+   
+   .birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+   }
+   
+   .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+   }
+   
+   .birthdayCard:hover .happy {
+    visibility: hidden;
+   }
+   
+   footer{
+    font-size: 20px;
+    font-weight: 550;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 15px ;
+   }
+
+
+   .body1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+   }
+
+   .birthdaycard{
+    position: absolute;
+    width: 200px;
+    height:250px;
+    top: 95px;
+    margin-left: 75%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: .4s;
+   }
+
+   .birthdaycard:hover {
+	transform: perspective(2500px) rotate(5deg);
+	box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+   }
+   .birthdaycard:hover .cardfront {
+    transform: rotateY(-160deg); 
+   }
+  
+  .birthdaycard:hover .front-text {
+    display: none;
+   }
+  
+  .birthdaycard:hover .wrap-deco {
+    display: none;
+   }
+  
+  .birthdaycard:hover .wrap-decoTwo {
+    display: none;
+   }
+  
+  .birthdaycard:hover .plate {
+    display: none;
+   }
+
+   .cardfront {
+    position: relative;
+    background-color: #fff;
+    width: 200px;
+    height:250px;
+    border-radius: 14%;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+    transition: .4s;
+   }
+
+   .Happy, .toyou {
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px; 
+    user-select: none;
+   }
+  
+  .Happy {
+    top:40px;
+    user-select: none;
+   }
+  
+  .toyou {
+    top:-15px;
+    left: 12px;
+    user-select: none;
+   }
+  
+  .bday {
+    position: relative;
+    font-family: arial;
+    font-size: 35px;
+    text-align: center;
+    top:10px;
+    user-select: none;
+   }
+  
+  .wrap-deco {
+    position: absolute;
+    top:-235px;
+    left:-265px;
+   }
+  
+  .decorations {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%;
+   }
+  
+  .decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+    content:"";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width:0;
+    height:0;
+   }
+  
+  .decorations:before {
+    border-top: 40px solid #f15bb5;
+    top:297px;
+    left:210px;
+    transform: rotate(-5deg);
+   }
+  
+  .decorations:after{
+    border-top: 40px solid #f4d35e;
+    top:288px;
+    left:260px;
+    transform: rotate(-17deg);
+   }
+  
+  .decorationsTwo:before {
+    border-top: 40px solid #00f5d4;
+    top:268px;
+    left:315px;
+    transform: rotate(-30deg);
+   }
+  
+  .decorationsTwo:after, .decorationsThree:after {
+    border-top: 40px solid #9b5de5;
+    top:238px;
+    left:355px;
+    transform: rotate(-40deg);
+   }
+  
+  .wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top:-235px;
+    left:465px; 
+   }
+  
+  .decorationsThree:before {
+    border-top: 40px solid #00bbf9;
+    top:268px;
+    left:315px;
+    transform: rotate(-30deg);
+   }
+  
+  .plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #00bbf9;
+    left:37px;
+    top:245px;
+   }
+  
+  .cake {
+    position: absolute;
+    overflow: hidden;
+    width:100px;
+    height: 50px;
+    background-color: #f15bb5;
+    border-radius: 10px 10px 0 0;
+    top:-50px;
+    left:15px;
+    box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818;
+   }
+  
+  .cake:before {
+    content:"";
+    position: absolute;
+    background-color: #432818;
+    width:10px;
+    height:20px;
+    top:5px;
+    border-radius:20px;
+    box-shadow: 10px 5px #f15bb5, 20px 0px #432818, 30px 2px #f15bb5, 40px 5px #432818, 50px 5px #f15bb5, 60px 0px #432818, 70px 5px #f15bb5, 80px 5px #432818, 90px 5px #f15bb5;
+   }
+  
+  .plate:before {
+    content:"";
+    position: absolute;
+    background: repeating-linear-gradient(-45deg, #9b5de5, #9b5de5 3px, #00f5d4 3px, #00f5d4 6px);
+    width:7px;
+    height: 25px;
+    top:-75px;
+    left:61px;
+   }
+  
+  .plate:after {
+    content:"";
+    position: absolute;
+    width:1px;
+    height: 5px;
+    background-color: #333;
+    top:-80px;
+    left:64px;
+   }
+  
+  
+  .flame {
+    position: absolute;
+    background-color: #fb5607;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    transform: rotate(-45deg);
+    width:15px;
+    height:15px;
+    opacity:0.7;
+    top:-93px;
+    left:57px;
+   }
+
+   .cardinside {
+    position: absolute;
+    background-color: #f87df8;
+    width: 200px;
+    height:250px;
+    border-radius: 6%;
+    z-index:-1;
+    left:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+    top:0;
+    align-items: center;
+   }
+   
+   .img{
+    margin-top: 5px;
+    margin-left: 5px;
+    align-items: center;
+   }
+   .img1{
+    border-radius: 9%;
+   }
+
+   h1{
+    font-size: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(249, 17, 226);
+    position: absolute;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 4%;
+    user-select: none;
+   }
+   h5{
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(249, 17, 226);
+    position: absolute;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: 12%;
+    font-size: 85px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+   }
+  
+
+   h1::before{
+    content: " Happy";
+   }
+   h5::before{
+    content: " Birthday";
+   }
+   h1::before{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: rgb(249, 17, 226);
+    border-right: 8px solid  rgb(249, 17, 226);
+    transition: 1s ease-in-out;
+    user-select: none;
+   }
+   h5::before{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: rgb(249, 17, 226);
+    border-right: 8px solid  rgb(249, 17, 226);
+    transition: 1s ease-in-out;
+    user-select: none;
+   }
+
+   h1:hover::before,h5:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px  rgb(249, 17, 226));
+
+   }
+
+   #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 40%;
+    top: 75%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+    width: 20vmin;
+    height: 35vmin;
+    object-fit: cover;
+    object-position: 100% right;
+  }
+
+   /* @keyframes blink {
+    0% {
+     color: white;
+    }
+   
+    20% {
+     color: yellow;
+    }
+   
+    40% {
+     color: greenyellow;
+    }
+   
+    60% {
+     color: red;
+    }
+   
+    80% {
+     color: hotpink;
+    }
+   
+    100% {
+     color: blue;
+    }
+   } */
+
+   
